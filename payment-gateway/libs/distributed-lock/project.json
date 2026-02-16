@@ -1,0 +1,20 @@
+{
+  "name": "distributed-lock",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/distributed-lock/src",
+  "projectType": "library",
+  "tags": ["type:util"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/distributed-lock",
+        "tsConfig": "libs/distributed-lock/tsconfig.lib.json",
+        "packageJson": "libs/distributed-lock/package.json",
+        "main": "libs/distributed-lock/src/index.ts",
+        "assets": ["libs/distributed-lock/*.md"]
+      }
+    }
+  }
+}
