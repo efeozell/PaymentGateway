@@ -1,0 +1,20 @@
+{
+  "name": "idempotency",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/idempotency/src",
+  "projectType": "library",
+  "tags": ["type:util"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/idempotency",
+        "tsConfig": "libs/idempotency/tsconfig.lib.json",
+        "packageJson": "libs/idempotency/package.json",
+        "main": "libs/idempotency/src/index.ts",
+        "assets": ["libs/idempotency/*.md"]
+      }
+    }
+  }
+}
