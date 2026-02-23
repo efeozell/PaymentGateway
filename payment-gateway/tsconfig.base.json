@@ -15,11 +15,18 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@payment-gateway/queue": ["libs/queue/src/index.ts"],
+      "@payment-gateway/database": ["libs/database/src/index.ts"],
+      "@payment-gateway/shared": ["libs/shared/src/index.ts"],
+      "@payment-gateway/payment-provider": [
+        "libs/payment-provider/src/index.ts"
+      ],
       "@payment-gateway/distributed-lock": [
         "libs/distributed-lock/src/index.ts"
       ],
       "@payment-gateway/idempotency": ["libs/idempotency/src/index.ts"],
-      "@payment-gateway/outbox": ["libs/outbox/src/index.ts"]
+      "@payment-gateway/outbox": ["libs/outbox/src/index.ts"],
+      "@payment-gateway/queue": ["libs/queue/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
