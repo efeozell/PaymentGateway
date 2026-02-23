@@ -27,7 +27,7 @@ import { QueueModule } from '@payment-gateway/queue';
         extra: {
           max: 20,
           min: 5,
-          idleTimeoutMillis: 3000,
+          idleTimeoutMillis: 30000,
         },
       }),
       inject: [ConfigService],

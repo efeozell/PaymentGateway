@@ -22,6 +22,9 @@ export class OutboxEvent {
   @Column({ type: 'jsonb' })
   payload!: Record<string, unknown>;
 
+  @Column({ type: 'timestamp', name: 'processed_at', nullable: true })
+  processedAt?: Date;
+
   @CreateDateColumn({ name: 'created_at' })
   createdAt!: Date;
 }

@@ -1,10 +1,14 @@
 import {
   Column,
   CreateDateColumn,
+  Entity,
   Index,
   PrimaryGeneratedColumn,
+  Unique,
 } from 'typeorm';
 
+@Entity('webhook_events')
+@Unique('uq_provider_event', ['provider', 'providerEventId'])
 export class WebhookEvent {
   @PrimaryGeneratedColumn('uuid')
   id!: string;

@@ -53,5 +53,5 @@ async function bootstrap() {
 }
 
 bootstrap().catch((err) => {
-  Logger.log(`Payment Service Error: ${err} : ${err.message}`);
+  Logger.error(`Payment Service Error: ${err} : ${err.message}`);
 });
