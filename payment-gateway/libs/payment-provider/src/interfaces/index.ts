@@ -4,4 +4,5 @@ export {
   ChargeResponse,
   StatusCheckResponse,
   RefundResponse,
+  WebhookEventParsed,
 } from './payment-provider.interface';

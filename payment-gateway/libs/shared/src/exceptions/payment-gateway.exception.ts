@@ -79,3 +79,23 @@ export class TransactionNotFoundException extends PaymentGatewayException {
     );
   }
 }
+
+export class ProviderUnavailableException extends PaymentGatewayException {
+  constructor(provider: string) {
+    super(
+      `Saglayici kullanilamiyori: ${provider}`,
+      HttpStatus.SERVICE_UNAVAILABLE,
+      'PROV_UNAVAILABLE',
+    );
+  }
+}
+
+export class WebhookSignatureInvalidException extends PaymentGatewayException {
+  constructor(provider: string) {
+    super(
+      `Webhook imza dogrulamasi basarisiz: ${provider}`,
+      HttpStatus.UNAUTHORIZED,
+      'PROV_INVALID_WEBHOOK_SIGNATURE',
+    );
+  }
+}
