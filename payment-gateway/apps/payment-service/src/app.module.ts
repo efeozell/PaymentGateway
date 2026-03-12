@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { PaymentModule } from './modules/payment/payment.module';
 import { HealthModule } from './modules/health/health.module';
-import { dataSourceOptions } from '@payment-gateway/database';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PaymentProviderModule } from '@payment-gateway/payment-provider';

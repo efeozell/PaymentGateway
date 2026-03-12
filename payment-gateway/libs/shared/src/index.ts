@@ -9,6 +9,8 @@ export {
   PaymentProvider,
   Currency,
   CURRENCY_DECIMALS,
+  toMinorUnits,
+  formatAmountForProvider,
 } from './constants/provider.enum';
 
 export {
@@ -30,4 +32,6 @@ export {
   ProviderApiException,
   ProviderDeclinedException,
   TransactionNotFoundException,
+  ProviderUnavailableException,
+  WebhookSignatureInvalidException,
 } from './exceptions/payment-gateway.exception';
